@@ -9,12 +9,13 @@ class Solution {
         }
         for(int num:nums2)
         {
+            if(set1.contains(num))
             set2.add(num);
         }
-        set1.retainAll(set2);
-        int[] mat=new int[set1.size()];
+        
+        int[] mat=new int[set2.size()];
         int i=0;
-        for(int j:set1)
+        for(int j:set2)
         {
             mat[i++]=j;
         }
